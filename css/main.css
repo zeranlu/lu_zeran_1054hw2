@@ -8,30 +8,29 @@ html, body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: #cfcfcf;
+    background-image: url(../images/background.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
+span {
+    color:rgb(143, 9, 9);
+}
+
 header {
-    background-color: red;
-    padding: 10px 0;
+    background-color: rgb(255, 255, 255);
+    padding: 50px 0 40px 0;
 }
 
 #main-logo {
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
     display: block;
-    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
-}
-
-#character-nav {
-    background-color: #675050;
-    background-image: url(../images/characters_art_mas_mob_01.jpeg);
-    background-size: cover;
-    background-blend-mode: multiply;
 }
 
 #character-nav ul {
@@ -43,15 +42,15 @@ header {
 }
 
 #character-nav ul li {
-    height: 220px;
-    margin: 10px 8px; /*top, botttom, left right*/
+    height: 200px;
+    margin: 20px 20px; /*top, botttom, left right*/
     background-color: black;
-    box-shadow: 0 155px 0 0 rgb(255,0,0) inset;
-    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 155px 0 0 rgb(143, 9, 9) inset;
+    transition: box-shadow 0.75s ease-in-out;
 }
 
 #character-nav ul li:hover {
-    box-shadow: 0 220px 0 0 rgb(255,0,0) inset;
+    box-shadow: 0 200px 0 0 rgb(88, 2, 2) inset;
 }
 
 #character-nav ul li h2 {
@@ -67,36 +66,37 @@ header {
 .sprite {
     width: 150px;
     height: 150px;
-    background-image: url(../images/marvelSprites.jpg);
+    background-image: url(../images/screamsprite.png)
 }
 
-#carol {
+#billy {
     background-position: -150px 0;
 }
 
-#clint {
+#randy {
     background-position: -300px 0;
 }
 
-#hulk {
+#gale {
     background-position: -450px 0;
 }
 
-#thor {
+#dewey {
     background-position: -600px 0;
 }
 
-#widow {
+#stu {
     background-position: -750px 0;
 }
 
-#cap:hover, #carol:hover, #clint:hover, #hulk:hover, #thor:hover, #widow:hover{
+#sidney:hover, #billy:hover, #randy:hover, #gale:hover, #dewey:hover, #stu:hover{
     background-position-y: -150px;
 }
 
 #instructions {
     padding: 20px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.50);
 }
 
 #instructions h3 {
@@ -106,12 +106,12 @@ header {
 }
 
 footer {
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-    background-color: rgb(40, 37, 37);
-    height: 80px;
+    background-color: rgb(255, 255, 255);
     position: sticky;
     top: 100%;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -125,33 +125,51 @@ footer {
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,.85);
-    background-image: url(../images/Cap_LB_Bg.png);
     background-repeat: no-repeat;
-    background-size: 55vh;
-    background-position: 40px bottom;
+    background-size: 100vh;
+    background-position: top left;
     display: none;
     text-align: right;
 }
 
+#lightbox1 {
+     background-image: url(../images/ghostface1.png);
+     background-position: -100px bottom;
+     background-size: 800px;
+}
+
 /* we overwrite cap using specific ids */
 #lightbox2 {
-    background-image: url(../images/carol.jpeg);
+    background-image: url(../images/ghostface2.png);
 }
 
 #lightbox3 {
-    background-image: url(../images/clint.jpeg);
+    background-image: url(../images/ghostface3.png);
+}
+
+#lightbox4 {
+    background-image: url(../images/ghostface4.png);
+    background-position: 0 bottom;
+    background-size: 40%;
 }
 
 #lightbox5 {
-    background-image: url(../images/Thor_LB_Bg.png);
+    background-image: url(../images/ghostface5.png);
+}
+
+#lightbox6 {
+    background-image: url(../images/ghostface6.png);
+    background-position: -150px bottom;
+    background-size: 70%;
 }
 
 /* target allows us to show content based on the url
 e.g. #lightbox, #lightbox2, #lightbox3  */
 
 /* selecor would be .lightbox#lightbox2, .lightbox#lightbox3  */
+
 .lightbox:target {
-    display: block;
+    display: block !important;
 }
 
 .lightbox-close {
@@ -164,7 +182,7 @@ e.g. #lightbox, #lightbox2, #lightbox3  */
 }
 
 .lightbox-close:hover { 
-    opacity: 0.5; color: red; 
+    opacity: 0.5; color: rgb(143, 9, 9); 
 }
 
 .lightbox article {
